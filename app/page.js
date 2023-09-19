@@ -14,24 +14,38 @@ const page = () => {
       </div>
     </div>
       <div className="px-10 md:px-20 border-gray-500 border-y text-6xl md:text-8xl font-bold flex justify-between relative"> 
-        <div className='py-10 border-gray-500 border-x px-6 text-white w-full'>Chandra Bose.</div>
-        <div className='absolute w-full md:w-1/6 inset-x-[70%] md:inset-x-2/4'>
+        <div className='py-10 border-gray-500 border-x px-6 relative text-white w-full'>Chandra Bose.</div>
+        <div className='absolute w-full md:w-1/6 inset-x-[80%] md:top-2 md:inset-x-2/4'>
           <div class="px-4 absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-black">
             Good Morning!
           </div>
           <svg viewBox="0 0 22 18" fill="none" class="relative top-[2rem] left-[7px] w-5 text-green-500"><path d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z" fill="currentColor"></path></svg>
         </div>
-        <div className='hidden border-r border-gray-500 w-0 md:w-1/6 md:contents'></div>
+        <div className='invisible hidden border-r border-gray-500 w-0 md:w-4/12 md:visible px-8 md:flex justify-center flex-col items-end'>
+          <div className='captalize text-lg font-normal m-x-2 w-fit items-right py-4'>Recent Favorite</div>
+          <div className='border-b border-gray-500 w-full'></div>
+          <div className='flex gap-4 pt-4'>
+            <div className=' flex flex-col items-end'>
+              <div className='text-base font-light'>Colyn</div>
+              <div className='font-light text-base text-gray-500'>Wait For You</div>
+            </div>
+            <div className='w-12 bg-white rounded-full'>
+
+            </div>
+          </div>  
+        </div>
+
+
       </div>
       <div className='flex flex-col md:flex-row md:items-bottom md:justify-between'>
       <div className="px-10 md:p-0  md:w-fit border-gray-500 text-center text-6xl font-bold md:order-2 md:relative">
         <div className='py-10 md:py-6 border-x md:border-x-0 md:border-b border-gray-500 flex'>
-        <Image src="/profile.jpeg" width={800} height={800} alt="Chandra Bose" class="w-[17.5rem] relative h-[22rem] md:w-[25rem] md:h-[28rem] rounded-3xl ml-6 md:ml-0" />
-        <div class="flex items-start justify-end space-x-3 absolute bottom-[14.5rem] left-24 z-10 md:bottom-12 md:left-6 ">
+        <Image src="/profile.jpeg" width={800} height={800} alt="Chandra Bose" class="w-[19rem] relative h-[22rem] md:w-[25rem] md:h-[27rem] rounded-3xl ml-6 md:ml-0" />
+        <div class="flex items-start justify-end space-x-3 absolute inset-y-[55%] left-24 z-10 md:inset-y-[80%] md:left-8">
           <svg viewBox="0 0 18 14" fill="none" class="h-4 text-white/50">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.25C0 1.65326 0.237053 1.08097 0.65901 0.65901C1.08097 0.237053 1.65326 0 2.25 0H15.75C16.0455 0 16.3381 0.058198 16.611 0.171271C16.884 0.284344 17.1321 0.450078 17.341 0.65901C17.5499 0.867942 17.7157 1.11598 17.8287 1.38896C17.9418 1.66194 18 1.95453 18 2.25V11.75C18 12.0455 17.9418 12.3381 17.8287 12.611C17.7157 12.884 17.5499 13.1321 17.341 13.341C17.1321 13.5499 16.884 13.7157 16.611 13.8287C16.3381 13.9418 16.0455 14 15.75 14H2.25C1.65326 14 1.08097 13.7629 0.65901 13.341C0.237053 12.919 0 12.3467 0 11.75V2.25ZM1.5 8.06V11.75C1.5 12.164 1.836 12.5 2.25 12.5H15.75C15.9489 12.5 16.1397 12.421 16.2803 12.2803C16.421 12.1397 16.5 11.9489 16.5 11.75V9.06L14.28 6.841C14.1394 6.70055 13.9488 6.62166 13.75 6.62166C13.5512 6.62166 13.3606 6.70055 13.22 6.841L11.31 8.75L11.78 9.22C11.8537 9.28866 11.9128 9.37146 11.9538 9.46346C11.9948 9.55546 12.0168 9.65478 12.0186 9.75548C12.0204 9.85618 12.0018 9.95621 11.9641 10.0496C11.9264 10.143 11.8703 10.2278 11.799 10.299C11.7278 10.3703 11.643 10.4264 11.5496 10.4641C11.4562 10.5018 11.3562 10.5204 11.2555 10.5186C11.1548 10.5168 11.0555 10.4948 10.9635 10.4538C10.8715 10.4128 10.7887 10.3537 10.72 10.28L5.53 5.091C5.38937 4.95055 5.19875 4.87166 5 4.87166C4.80125 4.87166 4.61063 4.95055 4.47 5.091L1.5 8.06ZM11 4C11 4.26522 10.8946 4.51957 10.7071 4.70711C10.5196 4.89464 10.2652 5 10 5C9.73478 5 9.48043 4.89464 9.29289 4.70711C9.10536 4.51957 9 4.26522 9 4C9 3.73478 9.10536 3.48043 9.29289 3.29289C9.48043 3.10536 9.73478 3 10 3C10.2652 3 10.5196 3.10536 10.7071 3.29289C10.8946 3.48043 11 3.73478 11 4Z" fill="currentColor"></path>
           </svg>
-          <div class="text-sm font-bold uppercase text-white">IMG_0526.jpg</div>
+          <div class="text-sm font-bold uppercase text-white">IMG_0312.jpg</div>
         </div>
         </div>
       </div>
@@ -63,12 +77,12 @@ const page = () => {
               </div>
           </div>
       </div>
-      <div className='px-10 md:pr-20 md:w-2/5  border-b border-gray-500 order-3'>
+      <div className='px-10 md:pr-20 md:w-2/5  border-b border-gray-500 md:order-3'>
         <div className='py-10 px-6 md:h-full border-x border-gray-500 skills'>
           <div className='text-2xl font-medium text-green-400 uppercase'>Skills</div>
           <div className='flex flex-wrap gap-4 pt-10'>
             {skills.map((e) => (
-            <span className='border rounded-lg border-gray-500 w-fit px-8 py-2'>
+            <span className='border rounded-lg md:text-sm border-gray-500 w-fit px-8 py-2'>
               {e}
             </span>
             ))}
@@ -76,8 +90,14 @@ const page = () => {
         </div>
       </div>
       </div>
+      <div className='px-10 md:pr-20 md:px-20  border-b border-gray-500'>
+        <div className='py-10 px-6 md:h-full border-x italic border-gray-500 text-gray-500'>
+          <div className='text-center text-[2rem] font-light'>Never Stop <span className='border-b-2 text-white border-green-500'>Building,</span>
+          <div className=' text-[2rem]'>Never Stop <span className='border-b-2 text-white border-green-500'>Learning.</span></div></div>
+        </div>
+      </div>
       <div className='px-10 md:px-20 border-b border-gray-500'>
-        <div className='py-10 px-6 border-x border-gray-500'>
+        <div className='py-10 px-6 border-x border-gray-500 skills'>
           <div className='text-2xl font-medium text-green-400 uppercase'>Projects</div>
             <div className='flex flex-wrap gap-6 pt-10'>
               <Card/>
