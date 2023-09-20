@@ -6,7 +6,19 @@ import Card from '@/components/Card'
 const page = () => {
 
   const skills = ['HTML','CSS','SASS','JavaScript','React','NextJS','TailwindCSS','GSAP','Material UI','Firebase','Figma']
-  const greetings = new Date().getHours() > 12 ? 'Good Afternoon' : 'Good Morning'
+  const currentHour = new Date().getHours();
+  let greetings = '';
+
+  if (currentHour >= 5 && currentHour < 12) {
+    greetings = 'Good Morning!';
+  } else if (currentHour >= 12 && currentHour < 17) {
+    greetings = 'Midday Magic';
+  } else if (currentHour >= 17 && currentHour < 21) {
+    greetings = 'Cozy Evening!';
+  } else {
+    greetings = 'Hey night-owl!';
+  }
+
   return (
     <div className='overflow-hidden'>
     <div className='px-10 md:px-20 border-[#48515ea8]'>
@@ -19,7 +31,7 @@ const page = () => {
           <div class="px-4  absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-black tracking-wide">
             {greetings}
           </div>
-          <svg viewBox="0 0 22 18" fill="none" class="relative top-[2rem] left-[7px] w-5 text-green-500 tracking-wide"><path d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z" fill="currentColor"></path></svg>
+          <svg viewBox="0 0 22 18" fill="none" class="relative top-[2rem] left-[7px] w-5 text-[#00CB2C] tracking-wide"><path d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z" fill="currentColor"></path></svg>
         </div>
         <div className='invisible hidden border-r border-[#48515ea8] w-0 md:w-2/5 md:visible px-8 md:flex justify-center flex-col items-end bg-gradient-to-br from-[#3943575d] from-1% via-[#10131a3a]  backdrop-blur-xl to-[#05060831] to-80%'>
           <div className='captalize text-lg font-light m-x-2 w-fit items-right py-4 text-gray-500'>Recent Favorite</div>
@@ -88,8 +100,8 @@ const page = () => {
       </div>
       <div className='px-10 md:pr-20 md:w-2/5  border-b border-[#48515ea8] md:order-3'>
         <div className='py-10 px-6 md:h-full border-x border-[#48515ea8] dots_bg'>
-          <div className='text-xl font-medium text-green-500 uppercase flex items-center gap-2'>
-          <svg viewBox="0 0 17 16" fill="none" class="h-4 text-green-500 dark:text-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.69968 1.52865V6.17265C6.69968 6.90165 6.40968 7.60065 5.89468 8.11665L4.67768 9.33265C5.89128 9.29107 7.10025 9.50256 8.22768 9.95365L8.72968 10.1546C10.056 10.6853 11.5095 10.8122 12.9077 10.5196L10.5047 8.11665C9.98925 7.60098 9.6997 6.90174 9.69968 6.17265V1.52865C8.70003 1.49133 7.69933 1.49133 6.69968 1.52865ZM11.1997 1.61265L11.3897 1.62765C11.4887 1.63719 11.5887 1.62694 11.6837 1.59747C11.7787 1.56801 11.867 1.51993 11.9432 1.45604C12.0195 1.39214 12.0823 1.31371 12.128 1.22531C12.1736 1.1369 12.2013 1.0403 12.2092 0.941115C12.2172 0.841933 12.2053 0.742159 12.1744 0.647604C12.1434 0.553049 12.0939 0.465603 12.0288 0.39036C11.9637 0.315117 11.8843 0.253581 11.7951 0.209336C11.706 0.165091 11.609 0.139022 11.5097 0.132648C9.30655 -0.044216 7.0928 -0.044216 4.88968 0.132648C4.69375 0.151531 4.5131 0.246682 4.3867 0.397571C4.2603 0.54846 4.19828 0.742992 4.21403 0.939196C4.22978 1.1354 4.32203 1.31755 4.47088 1.44635C4.61973 1.57514 4.81325 1.64026 5.00968 1.62765L5.19968 1.61265V6.17265C5.19968 6.50365 5.06768 6.82165 4.83368 7.05565L0.799677 11.0906C-0.696323 12.5866 -0.017323 15.2406 2.20268 15.5656C4.16068 15.8526 6.16268 16.0006 8.19968 16.0006C10.2367 16.0006 12.2387 15.8526 14.1967 15.5646C16.4167 15.2396 17.0967 12.5856 15.5997 11.0896L11.5657 7.05565C11.3315 6.82143 11.1999 6.50385 11.1997 6.17265V1.61265Z" fill="currentColor"></path></svg>
+          <div className='text-xl font-medium text-[#00CB2C] uppercase flex items-center gap-2'>
+          <svg viewBox="0 0 17 16" fill="none" class="h-4 text-[#00CB2C] dark:text-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.69968 1.52865V6.17265C6.69968 6.90165 6.40968 7.60065 5.89468 8.11665L4.67768 9.33265C5.89128 9.29107 7.10025 9.50256 8.22768 9.95365L8.72968 10.1546C10.056 10.6853 11.5095 10.8122 12.9077 10.5196L10.5047 8.11665C9.98925 7.60098 9.6997 6.90174 9.69968 6.17265V1.52865C8.70003 1.49133 7.69933 1.49133 6.69968 1.52865ZM11.1997 1.61265L11.3897 1.62765C11.4887 1.63719 11.5887 1.62694 11.6837 1.59747C11.7787 1.56801 11.867 1.51993 11.9432 1.45604C12.0195 1.39214 12.0823 1.31371 12.128 1.22531C12.1736 1.1369 12.2013 1.0403 12.2092 0.941115C12.2172 0.841933 12.2053 0.742159 12.1744 0.647604C12.1434 0.553049 12.0939 0.465603 12.0288 0.39036C11.9637 0.315117 11.8843 0.253581 11.7951 0.209336C11.706 0.165091 11.609 0.139022 11.5097 0.132648C9.30655 -0.044216 7.0928 -0.044216 4.88968 0.132648C4.69375 0.151531 4.5131 0.246682 4.3867 0.397571C4.2603 0.54846 4.19828 0.742992 4.21403 0.939196C4.22978 1.1354 4.32203 1.31755 4.47088 1.44635C4.61973 1.57514 4.81325 1.64026 5.00968 1.62765L5.19968 1.61265V6.17265C5.19968 6.50365 5.06768 6.82165 4.83368 7.05565L0.799677 11.0906C-0.696323 12.5866 -0.017323 15.2406 2.20268 15.5656C4.16068 15.8526 6.16268 16.0006 8.19968 16.0006C10.2367 16.0006 12.2387 15.8526 14.1967 15.5646C16.4167 15.2396 17.0967 12.5856 15.5997 11.0896L11.5657 7.05565C11.3315 6.82143 11.1999 6.50385 11.1997 6.17265V1.61265Z" fill="currentColor"></path></svg>
             Skills</div>
           <div className='flex flex-wrap gap-4 pt-10'>
             {skills.map((e) => (
@@ -129,8 +141,8 @@ const page = () => {
       
       <div className='px-10 md:px-20 border-b border-[#48515ea8]'>
         <div className='py-10 px-6 border-x border-[#48515ea8] dots_bg'>
-          <div className='text-xl font-medium text-green-500 uppercase flex items-center gap-2'>
-          <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 text-green-500 dark:text-white"><path d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div className='text-xl font-medium text-[#00CB2C] uppercase flex items-center gap-2'>
+          <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 text-[#00CB2C] dark:text-white"><path d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
             Projects</div>
             <div className='flex flex-wrap gap-6 pt-10'>
               <Card/>
