@@ -7,7 +7,7 @@ const Card = () => {
         {
         name: 'Netflix Clone',
         image: '/netflix.jpg',
-        technologies: ['React','TailwindCSS','Firestore','Stripe Payment','Firebase Authentication'],
+        technologies: ['React','TailwindCSS','Firebase','Stripe Payment','Firebase Authentication'],
         link:'https://netflix-clone-chandrabosep.vercel.app/',
         },
         {
@@ -20,7 +20,7 @@ const Card = () => {
           name: 'Cosy Cradle',
           image: '/cosycradel.jpg',
           technologies: ['React','TailwindCSS','Firebase'],
-          link:'',
+          link:'https://cosycradle-580bc.web.app/',
       },
 
     ]
@@ -33,7 +33,7 @@ const Card = () => {
             <div className='relative'>
               {/* 899 x 510 */}
                 <Image src={e.image} alt={e.name} className='w-full rounded-t-3xl object-cover' width={800} height={800}/>
-                <div className='absolute inset-0 bg-black opacity-50'></div>
+                <div className='absolute inset-0 bg-black opacity-30'></div>
             </div>
             <div className='px-4 pb-6  md:pb-[6%]'>
               <div className='py-4 md:pt-2 md:pb-0.5 text-xl font-md md:text-xl'>
@@ -41,7 +41,7 @@ const Card = () => {
               </div>
             <div className='flex gap-3 md:gap-2 flex-wrap md:pt-2'>
             {e.technologies.map((e) => (
-                <span className='border rounded-xl md:rounded-md border-gray-500 px-5 py-1.5 md:px-3 md:py-1 md:text-sm'>{e}</span>
+                <span className='border rounded-xl md:rounded-md border-gray-500 px-5 py-1.5 md:px-3 md:py-1 text-xs md:text-sm'>{e}</span>
             ))}
             </div>
             </div>
