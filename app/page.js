@@ -27,7 +27,7 @@ const page = () => {
     </div>
       <div className="px-10 md:px-20 border-[#48515ea8] border-y text-6xl md:text-8xl flex justify-between relative"> 
         <div className='py-12 md:py-10  border-[#48515ea8] border-x px-6 relative text-white w-full font-bold'>Chandra Bose.</div>
-        <div className='absolute  md:flex w-full md:w-1/6 inset-x-[50%] top-3 md:top-6 md:inset-x-2/4'>
+        <div className='absolute  md:flex w-full md:w-1/6 inset-x-[50%] top-3 md:top-4 md:inset-x-[45%]'>
           <div class="px-4  absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-black tracking-wide">
             {greetings}
           </div>
@@ -50,10 +50,10 @@ const page = () => {
 
       </div>
       <div className='flex flex-col md:flex-row md:items-bottom md:justify-between'>
-      <div className="px-10 md:p-0  md:w-fit border-[#48515ea8] text-center text-6xl font-bold md:order-2 md:relative">
-        <div className='py-10 md:py-6 border-x md:border-x-0 md:border-b border-[#48515ea8] flex w-full justify-center items-center'>
+      <div className="px-10 md:p-0  md:w-fit border-[#48515ea8] text-center text-6xl font-bold md:order-2 md:relative ">
+        <div className='py-10 border-x md:border-x-0 md:border-b border-[#48515ea8] flex w-full justify-center items-center'>
         <Image src="/profile.jpeg" width={800} height={800} alt="Chandra Bose" class="w-[19rem] relative h-[23rem] md:w-[25rem] md:h-[28rem] rounded-3xl  md:ml-0" />
-        <div className='border-[#48515e67] border hidden md:flex md:w-[96%] self-center rounded-3xl md:left-2 md:h-[86%] absolute'></div>
+        <div className='border-[#48515e94] border hidden md:flex md:w-[96%] self-center rounded-3xl md:left-2 md:h-[82%] absolute'></div>
         <div className='absolute bottom-[25vh] md:bottom-[8vh] md:left-8'>
         <div class="flex space-x-3 z-10">
           <svg viewBox="0 0 18 14" fill="none" class="h-4 text-[#f7f7f7]">
