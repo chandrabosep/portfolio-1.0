@@ -39,7 +39,7 @@ const page = () => {
       <div className='flex flex-col md:flex-row md:items-bottom md:justify-between'>
       <div className="px-10 md:p-0  md:w-fit border-[#48515ea8] border-b text-center text-6xl font-bold md:order-2 flex justify-center items-center ">
         <div className='border-x md:border-x-0 py-8 border-[#48515ea8] flex w-full justify-center items-center'>
-        <Image src="/profile.jpeg" width={800} height={800} alt="Chandra Bose" class="w-10/12 md:w-[23rem] rounded-2xl md:rounded-lg" />
+        <Image src="/profile.jpg" width={800} height={800} alt="Chandra Bose" class="w-10/12 md:w-[23rem] rounded-lg md:rounded-lg" />
         </div>
       </div>  
       <div className="px-10 md:pl-20 md:w-5/12 border-b border-[#48515ea8] md:order-1">
