@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Card from '@/components/Card'
 const page = () => {
 
-  const skills = ['HTML','CSS','SASS','JavaScript','React','NextJS','TailwindCSS','GSAP','Material UI','Firebase','Figma']
+  const skills = ['HTML','CSS','SASS','JavaScript','solidity','React','NextJS','TailwindCSS','GSAP','Material UI','Shadcn','Firebase','Figma']
 
   return (
     <div className='overflow-hidden'>
