@@ -20,34 +20,39 @@ const page = () => {
   ];
 
   return (
-    <div className="overflow-hidden">
-      <div className="px-10 md:px-20 border-[#48515ea8]">
-        <div className="px-6 border-x border-[#48515ea8]  py-6"></div>
+    <div className="overflow-hidden max-w-screen-3xl mx-auto">
+      <div className="px-10 md:px-20 border-theme-light">
+        <div className="px-6 border-x border-theme-light  py-6"></div>
       </div>
-      <div className="px-10 md:px-20 border-[#48515ea8] border-y text-6xl md:text-8xl flex justify-between relative">
-        <div className="py-12 md:py-10  border-[#48515ea8] border-x px-6 relative text-white w-full font-bold">
-          Chandra Bose.
-        </div>
-        <div className="absolute  md:flex w-full md:w-1/6 inset-x-[50%] top-3 md:top-4 md:inset-x-[45%]">
-          <div class="px-4  absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-[#1c1c1c] tracking-wide">
-            What's up?
+      <div className="px-10 md:px-20 border-theme-light border-t flex justify-between ">
+        <div className="py-12 md:py-10  border-theme-light border-x px-6 text-white w-full ">
+          <div className="w-full md:w-fit h-full relative">
+            <h1 className="font-bold text-6xl md:text-[9rem] relative">
+              Chandra Bose.
+            </h1>
+            <div className="absolute md:flex w-1/4 md:w-1/6 right-0 top-0">
+              <div class="px-4  absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-[#1c1c1c] tracking-wide">
+                What's up?
+              </div>
+              <svg
+                viewBox="0 0 22 18"
+                fill="none"
+                class="relative top-[2rem] left-[7px] w-5 text-[#00CB2C] tracking-wide"
+              >
+                <path
+                  d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <svg
-            viewBox="0 0 22 18"
-            fill="none"
-            class="relative top-[2rem] left-[7px] w-5 text-[#00CB2C] tracking-wide"
-          >
-            <path
-              d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z"
-              fill="currentColor"
-            ></path>
-          </svg>
         </div>
-        <div className="invisible hidden border-r border-[#48515ea8] w-0 md:w-2/5 md:visible px-8 md:flex justify-center flex-col items-end bg-gradient-to-br from-[#3943575d] from-1% via-[#10131a3a]  backdrop-blur-xl to-[#05060831] to-80%">
-          <div className="captalize text-lg font-light m-x-2 w-fit items-right py-4 text-gray-500">
+
+        <div className="invisible hidden border-r border-theme-light w-0 md:w-2/5 md:visible px-8 md:flex justify-center flex-col items-end bg-gradient-to-br from-[#3943575d] from-1% via-[#10131a3a]  backdrop-blur-xl to-[#05060831] to-80%">
+          <div className="captalize text-lg font-medium m-x-2 w-fit items-right py-4 text-gray-500">
             Recent Favorite
           </div>
-          <div className="border-b border-[#48515ea8] w-full"></div>
+          <div className="border-b border-theme-light w-full"></div>
           <div className="flex gap-4 pt-4">
             <a
               href="https://open.spotify.com/track/6ljbkNIzfmFrGyYUTUAleN"
@@ -71,23 +76,23 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:items-bottom md:justify-between">
-        <div className="px-10 md:p-0  md:w-fit border-[#48515ea8] border-b text-center text-6xl font-bold md:order-2 flex justify-center items-center ">
-          <div className="border-x md:border-x-0 py-8 border-[#48515ea8] flex w-full justify-center items-center">
+      <div className="flex flex-col md:flex-row md:items-bottom md:justify-between border-theme-light border-y">
+        <div className="px-10 md:p-0 md:w-3/12 text-center text-6xl font-bold md:order-2 flex justify-center items-center ">
+          <div className="md:border-x-0 py-8 border-x border-theme-light flex w-full justify-center items-center">
             <Image
               src="/profile.jpg"
-              width={800}
-              height={800}
+              width={2000}
+              height={2000}
               alt="Chandra Bose"
-              class="w-10/12 md:w-[23rem] rounded-lg md:rounded-lg"
+              class="w-10/12 rounded-lg md:rounded-lg"
             />
           </div>
         </div>
-        <div className="px-10 md:pl-20 md:w-5/12 border-b border-[#48515ea8] md:order-1">
-          <div className="pb-10 md:h-full pt-6 px-6 border-x border-[#48515ea8]">
+        <div className="px-10 md:pl-20 md:w-5/12">
+          <div className="pb-10 md:h-full pt-6 px-6 border-x border-theme-light">
             <div className=" text-5xl font-bold md:text-4xl">About me</div>
             <div className="md:flex md:flex-col md:justify-between md:h-full md:pb-8">
-              <div className="py-8 text-lg font-lightopacity-70 max-w-2xl md:text-base text-[#77818F]">
+              <div className="py-8 text-lg font-lightopacity-70 max-w-2xl md:text-lg text-[#b8bdc4]">
                 I am a front-end wizard on a mission to unlock the secrets of
                 the web3 universe. Constantly curious, forever coding, and
                 always ready to dive into the latest tech trends.
@@ -118,7 +123,7 @@ const page = () => {
                   <a
                     href="https://twitter.com/Chandra_Bose31"
                     target="_blank"
-                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-[#48515ea8] flex items-center justify-center"
+                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-theme-light flex items-center justify-center"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -133,7 +138,7 @@ const page = () => {
                   <a
                     href="https://www.instagram.com/chandrabose.eth/"
                     target="_blank"
-                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-[#48515ea8] flex items-center justify-center"
+                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-theme-light flex items-center justify-center"
                   >
                     <svg
                       viewBox="0 0 22 22"
@@ -149,7 +154,7 @@ const page = () => {
                   <a
                     href="https://github.com/chandrabosep"
                     target="_blank"
-                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-[#48515ea8] flex items-center justify-center"
+                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-theme-light flex items-center justify-center"
                   >
                     <svg
                       viewBox="0 0 22 22"
@@ -165,7 +170,7 @@ const page = () => {
                   <a
                     href="https://www.linkedin.com/in/chandra-bose-p/"
                     target="_blank"
-                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-[#48515ea8] flex items-center justify-center"
+                    className="h-14 w-14 border rounded-full md:h-8 md:w-8 md:p-5 border-theme-light flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -182,8 +187,8 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="px-10 md:pr-20 md:w-2/5  border-b border-[#48515ea8] md:order-3">
-          <div className="py-10 px-6 md:h-full border-x border-[#48515ea8] dots_bg">
+        <div className="px-10 md:pr-20 md:w-2/5 border-y border-theme-light md:border-0 md:order-3">
+          <div className="py-10 px-6 md:h-full border-x border-theme-light dots_bg">
             <div className="text-xl font-medium text-[#00CB2C] uppercase flex items-center gap-2">
               <svg
                 viewBox="0 0 17 16"
@@ -201,7 +206,7 @@ const page = () => {
             </div>
             <div className="flex flex-wrap gap-4 pt-10">
               {skills.map((e) => (
-                <span className="border rounded-lg md:text-sm border-[#48515ea8] w-fit px-8 py-2">
+                <span className="border rounded-lg md:text-sm border-theme-light w-fit px-8 py-2">
                   {e}
                 </span>
               ))}
@@ -209,9 +214,9 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="border-[#48515ea8] w-full border-b flex flex-col md:flex-row justify-between ">
-        <div className="px-10 border-b md:pl-20 md:pr-0 md:border-0 w-full md:w-2/4 border-[#48515ea8] h-full">
-          <div className="py-16 md:py-28 md:h-full border-x italic font-extralight text-base md:text-3xl border-[#48515ea8] text-gray-500">
+      <div className="border-theme-light w-full border-b flex flex-col md:flex-row justify-between ">
+        <div className="px-10 border-b md:pl-20 md:pr-0 md:border-0 w-full md:w-2/4 border-theme-light h-full">
+          <div className="py-16 md:py-28 md:h-full border-x italic font-extralight text-base md:text-3xl border-theme-light text-gray-500">
             <div className="text-center">
               <span className="md:text-4xl">"</span>Keep on{" "}
               <span className="border-b-2 text-[#e2e2e2] border-green-500">
@@ -233,13 +238,13 @@ const page = () => {
           </div>
         </div>
         <div className="w-full md:w-2/4 bg-gradient-to-br px-10 md:px-0 from-[#3943573a] via-[#050608] to-[#050608] text-center flex md:items-center md:justify-center">
-          <div className="flex flex-col gap-6 border-x border-[#48515ea8] md:border-0 w-full md:w-fit py-20">
+          <div className="flex flex-col gap-6 border-x border-theme-light md:border-0 w-full md:w-fit py-20">
             <div className="text-2xl font-medium">Email me at.</div>
             <a
               href="mailto:chandrabosep3112@gmail.com"
               className="w-full justify-center flex md:contents"
             >
-              <div className="border-[#48515ea8] border rounded-xl md:w-full px-4 md:px-6 py-4 font-light text-[#77818F] flex items-center gap-4 bg-[#0c0f14bd]">
+              <div className="border-theme-light border rounded-xl md:w-full px-4 md:px-6 py-4 font-light text-[#77818F] flex items-center gap-4 bg-[#0c0f14bd]">
                 <span>
                   <svg
                     viewBox="0 0 20 16"
@@ -262,11 +267,11 @@ const page = () => {
           </div>
         </div>
 
-        <div className="mr-20 border-l border-[#48515ea8]"></div>
+        <div className="mr-20 border-l border-theme-light"></div>
       </div>
 
-      <div className="px-10 md:px-20 border-b border-[#48515ea8]">
-        <div className="py-10 px-6 border-x border-[#48515ea8] dots_bg">
+      <div className="px-10 md:px-20 border-b border-theme-light">
+        <div className="py-10 px-6 border-x border-theme-light dots_bg">
           <div className="text-xl font-medium text-[#00CB2C] uppercase flex items-center gap-2">
             <span>
               <svg
@@ -290,8 +295,8 @@ const page = () => {
         </div>
       </div>
 
-      <div className="px-10 md:px-20 border-b  border-[#48515ea8]">
-        <div className="py-16 px-6 border-x border-[#48515ea8] text-center">
+      <div className="px-10 md:px-20 border-b  border-theme-light">
+        <div className="py-16 px-6 border-x border-theme-light text-center">
           <div className="font-light text-base text-[#77818F]">
             Have an interesting, stupid or crazy idea you'd like some help
             building?{" "}
@@ -304,8 +309,8 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="px-10 md:px-20 border-[#48515ea8]">
-        <div className="py-8 px-6 border-x border-[#48515ea8]"></div>
+      <div className="px-10 md:px-20 border-theme-light">
+        <div className="py-8 px-6 border-x border-theme-light"></div>
       </div>
     </div>
   );
