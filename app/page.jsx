@@ -2,6 +2,7 @@ import React from "react";
 import "@/app/page.css";
 import Image from "next/image";
 import Card from "@/components/Card";
+import GreetingComponent from "@/components/Greeting";
 const page = () => {
   const skills = [
     "HTML",
@@ -24,26 +25,14 @@ const page = () => {
       <div className="px-10 md:px-20 border-theme-light">
         <div className="px-6 border-x border-theme-light  py-6"></div>
       </div>
-      <div className="px-10 md:px-20 border-theme-light border-t flex justify-between ">
-        <div className="py-12 md:py-10  border-theme-light border-x px-6 text-white w-full ">
-          <div className="w-full md:w-fit h-full relative">
-            <h1 className="font-bold text-6xl md:text-[9rem] relative">
+      <div className="px-10 md:px-20 border-theme-light border-t flex">
+        <div className="py-12 md:py-10 border-theme-light border-x px-6 text-white w-full">
+          <div className="w-full md:w-fit flex flex-col relative">
+            <h1 className="font-bold text-6xl order-2 md:text-[9rem] md:h-fit relative">
               Chandra Bose.
             </h1>
-            <div className="absolute md:flex w-1/4 md:w-1/6 right-0 top-0">
-              <div class="px-4  absolute py-2 bg-green-500 font-bold text-base h-fit rounded-full text-[#1c1c1c] tracking-wide">
-                What's up?
-              </div>
-              <svg
-                viewBox="0 0 22 18"
-                fill="none"
-                class="relative top-[2rem] left-[7px] w-5 text-[#00CB2C] tracking-wide"
-              >
-                <path
-                  d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+            <div className="md:px-20 z-10 order-1 pb-5 md:absolute md:flex w-full md:w-4/12 md:right-0 md:top-0">
+              <GreetingComponent />
             </div>
           </div>
         </div>
